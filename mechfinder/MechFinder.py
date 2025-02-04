@@ -6,7 +6,7 @@ from rdkit.Chem import MolFromSmiles as mfs, MolFromSmarts as mfsa, MolToSmiles 
 from utils.utils import *
 from utils.criterions import *
 
-from LocalTemplate.template_extractor import extract_from_reaction
+from template_extractor import extract_from_reaction
 
 out_of_scope_mechanisms = ['nitro_reduction', 'alkene_reduction', 'hydrogenative_deprotection', 'radical_reaction',
                         'aromatic_dehalogenation', 'Heck', 'alkyne_reduction', 'Stille_coupling', 'protodesilylation', 

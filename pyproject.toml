@@ -1,0 +1,16 @@
+[project]
+name = "mechfinder"
+version = "1.0.1"
+dependencies = [
+  "numpy",
+  "rdkit",
+  "pandas"
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["mechfinder"]
+
