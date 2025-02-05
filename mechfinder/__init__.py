@@ -1,1 +1,1 @@
-from MechFinder import  MechFinder
+from .MechFinder import  MechFinder

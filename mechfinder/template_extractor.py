@@ -3,17 +3,14 @@ This python script is modified from rdchiral template extractor
 https://github.com/connorcoley/rdchiral/blob/master/rdchiral/template_extractor.py
 '''
 import re
-from numpy.random import shuffle
-from collections import defaultdict
-from pprint import pprint 
 from copy import deepcopy
-from rdkit import Chem
+
 from rdkit.Chem import AllChem
 from rdkit.Chem.rdchem import ChiralType
 
-from .template_extract_utils import *
 from .template_extract_extention import *
-    
+from .template_extract_utils import *
+
 default_setting = {'verbose': False, 'use_stereo': False, 'include_neighbors': True, 'use_symbol': False, 'max_unmap': 5, 'retro': False, 'remote': True, 'least_atom_num': 2}
 
 def set_extractor(setting):

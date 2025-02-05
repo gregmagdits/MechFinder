@@ -1,9 +1,8 @@
-import pandas as pd 
-import numpy as np
-# np.warnings.filterwarnings('ignore', category=np.VisibleDeprecationWarning) 
+# np.warnings.filterwarnings('ignore', category=np.VisibleDeprecationWarning)
 from rdkit import Chem
-from rdkit.Chem import Draw, PandasTools
-from rdkit.Chem import AllChem, MolFromSmiles as mfs, MolFromSmarts as mfsa, MolToSmiles as mts, MolToSmarts as mtsa
+from rdkit.Chem import MolFromSmiles as mfs, MolFromSmarts as mfsa, MolToSmiles as mts
+from rdkit.Chem import PandasTools
+
 PandasTools.RenderImagesInAllDataFrames(images=True)
 
 from .arrow_pushing import arrow_pushing

@@ -1,6 +1,3 @@
-import rdkit
-from rdkit import Chem
-from rdkit.Chem import MolFromSmiles as mfs, MolToSmiles as mts, rdAbbreviations as abbrev, Draw   
 import copy
 
 from .utils import *

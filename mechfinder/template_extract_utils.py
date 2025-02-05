@@ -1,9 +1,6 @@
-import re
-import copy
 from collections import defaultdict
 
 from rdkit import Chem
-from rdkit.Chem import AllChem
 
 bond_type_map = {'SINGLE': '-', 'DOUBLE': '=', 'TRIPLE': '#', 'AROMATIC': '@'}
 

@@ -1,5 +1,4 @@
-from rdkit import Chem
-from utils.utils import *
+from .utils import *
 
 def get_degree(rxn, replacement_dict, see_template_map):
     see_atom_map = replacement_dict[see_template_map]

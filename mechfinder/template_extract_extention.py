@@ -2,14 +2,7 @@
 This python script is modified from rdchiral template extractor 
 https://github.com/connorcoley/rdchiral/blob/master/rdchiral/template_extractor.py
 '''
-import re
-from numpy.random import shuffle
-from collections import defaultdict
-from pprint import pprint 
-from copy import deepcopy
 from rdkit import Chem
-from rdkit.Chem import AllChem
-from rdkit.Chem.rdchem import ChiralType
 
 
 def get_special_groups(mol):

@@ -1,12 +1,10 @@
+import os
+
 import numpy as np
-from rdkit import Chem
-from rdkit.Chem import AllChem, Draw, PandasTools
-from rdkit.Chem import MolFromSmiles as mfs, MolFromSmarts as mfsa, MolToSmiles as mts, MolToSmarts as mtsa
+import pandas as pd
 
-from utils.utils import *
-from utils.criterions import *
-
-from template_extractor import extract_from_reaction
+from .template_extractor import extract_from_reaction
+from .utils.criterions import *
 
 out_of_scope_mechanisms = ['nitro_reduction', 'alkene_reduction', 'hydrogenative_deprotection', 'radical_reaction',
                         'aromatic_dehalogenation', 'Heck', 'alkyne_reduction', 'Stille_coupling', 'protodesilylation', 
@@ -138,7 +136,10 @@ def replace_xl(mech_pathway, ext_dict):
     return updated_mech_pathway
 
 class MechFinder:
-    def __init__(self, collection_dir='collections', debug = False):
+    def __init__(self, collection_dir=None, debug = False):
+        if not collection_dir:
+            # get name of the directory for this file
+            collection_dir = os.path.dirname(os.path.abspath(__file__)) + '/collections'
         MT_collection = pd.read_csv('%s/MT_library.csv' % collection_dir)
         LRT_collection = pd.read_csv('%s/LRT_library.csv' % collection_dir)
         self.MT_collection = MT_collection.replace(np.nan, None).set_index('MT_class').to_dict('index')
